@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DepartamentIMCS.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Entry x:Name="loginEntry" Placeholder = "Login" Completed="Login_Completed" PropertyChanged="Login_Completed" />
+            <Entry x:Name="passwordEntry"  Placeholder = "Password" IsPassword ="True" Completed="Password_Completed" PropertyChanged="Password_Completed" />
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

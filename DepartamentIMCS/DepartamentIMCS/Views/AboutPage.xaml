@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DepartamentIMCS.Views.AboutPage"
+             xmlns:vm="clr-namespace:DepartamentIMCS.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="30,24,30,24" VerticalOptions="FillAndExpand">
+                    <Label Text="Департемент математики и компьютерных наук" FontSize="Title"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="ДВФУ является ведущим научно-образовательным центром подготовки специалистов в сфере it и математики." FontSize="Title"/>
+                <Label Text="В 2021-2022 учебном году в ДВФУ ведется обучение по следующим направлениям подготовки: " FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="Бакалавриат" FontAttributes="Bold"></Label>
+                <Label Text="01.03.02 Прикладная математика и информатика" ></Label>
+                <Label Text="02.03.01 Математика и компьютерные науки" ></Label>
+                <Label Text="Магистратура" FontAttributes="Bold"></Label>
+                <Label Text="01.03.02 Прикладная математика и информатика" ></Label>
+                <Label Text="Аспирантура" FontAttributes="Bold"></Label>
+                <Label Text="01.06.01 Математика и механика" ></Label>
+                <Label Text="02.06.01 Компьютерные и информационные технологии" ></Label>
+                <Label Text="Набор обучающихся в 202X году произведен на X бюджетных мест, а также на внебюджетные (контрактные), и целевые места. "></Label>
+
+                <Button Margin="0,10,0,0" Text="Узнать больше о направления"
+                        Command="{Binding LoginCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

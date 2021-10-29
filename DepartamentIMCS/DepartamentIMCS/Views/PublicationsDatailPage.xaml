@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DepartamentIMCS.Views.PublicationsDatailPage"
+             Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Edite" Text="Edite" Command="{Binding EditeCommand}" />
+        <ToolbarItem x:Name="Delete" Text="Delete" Command="{Binding DeleteCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Image Source="" />
+            <Label Text="Название мероприятия" FontSize="Medium" />
+            <Label Text="{Binding Text}" FontSize="Small"/>
+            <Label Text="Описание" FontSize="Medium" />
+            <Label Text="{Binding Description}" FontSize="Small"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
